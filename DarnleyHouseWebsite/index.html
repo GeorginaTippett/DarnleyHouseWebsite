@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Georgina">
+	<meta name="description" content="Darnley House Website">
+	<meta name="keywords" content="adelaide, history, historical, architecture, vintage, australia, heritage">
+	<title>Welcome to Darnley House</title>
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="CSS/styling.css">
+
+</head>
+<body>
+		<div id="box">
+		<nav>
+			<ul class="home">
+				<li><a href="index.html">Home</a></li>
+			</ul>
+			<ul class="menu">
+				<li><a href="history.html">History</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		</ul>	
+		</nav>
+		<header>
+			<img src="DHlogo1.png" alt ="darnley house logo" id="logo" height="395px" width="1111px">
+		</header>
+		<div>
+			<img src = "images/HomePage.jpg" id="mainImage" alt="Darnley House" height="601" width="992" onclick="change();">
+			<br><br><br>
+		</div>
+<footer>Copyright &copy; 2018</footer>
+</div>
+<script type="text/javascript">
+	
+	var imageTracker ='pic1'; 
+
+function change(){ 
+	var image = document.getElementById('mainImage'); 
+		if(imageTracker=='pic1'){ 
+			image.src ="images/HomePage.jpg"; 
+			imageTracker='pic2'; 
+		}else if(imageTracker=='pic2'){
+			image.src="images/FrangipaniTree.jpg"; 
+			imageTracker='pic3'; 
+			}else{ image.src="images/BluestoneWalls.jpg"
+			imageTracker='pic1'; 
+		} 
+	} 
+	var timer = setInterval('change()', 5000); //makes it change every 5 secs... can work with variable 
+</script>
+
+</body>
+</html>
